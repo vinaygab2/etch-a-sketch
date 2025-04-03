@@ -28,7 +28,9 @@ function createGrid(rowSize) {
 
     // add hover effect on the boxes
     box.addEventListener('mouseover', (e) => {
-      box.style.backgroundColor = `rgb(${e.clientX}, ${e.clientY}, 200)`;
+      box.style.backgroundColor = `rgb(${e.clientX % 255}, ${
+        e.clientY % 255
+      }, ${(e.clientX + e.clientY) % 255})`;
     });
   }
 }
